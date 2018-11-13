@@ -15,11 +15,7 @@ public interface EmpDao {
 	public int insert(Emp emp);
 	public int update(Emp emp);
 	public int delete(int empno);
-	
-	// 마이바티스가 제공하는 애노테이션으로 사용할 SQL을 설정할 수 있다.
-	@Select("select * from emp order by empno asc")
 	public List<Emp> findAll();
-	
 	public int count();
 	public Emp findOne(int empno);
 }
